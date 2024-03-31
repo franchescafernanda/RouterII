@@ -1,42 +1,132 @@
-#root {
-  max-width: 1280px;
+  body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: white;
+}
+
+.title {
+  color: #333;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image {
+  display: block;
   margin: 0 auto;
-  padding: 2rem;
+  width: 25%;
+  max-width: 300px;
+}
+
+.navbar {
+  background-color: gray;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navbar a:hover {
+  background-color: #555;
+}
+
+.characters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.character h1 {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.character {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border: 1px solid #ccc;
+/*   box-shadow: 2px 2px 5px #ccc; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.character:hover {
+  background-color: #ddd;
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 2rem;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-left,
+  .navbar-right {
+    flex-direction: column;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+nav {
+  background-color: gray;
+  padding: 6px;
+
 }
 
-.card {
-  padding: 2em;
+ul {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  text-align: end;
+  color: gray;
+  text-decoration-style: none;
 }
 
-.read-the-docs {
-  color: #888;
+.personajes {
+  text-align: center;
+}
+
+button {
+  display: flex;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgb(79, 76, 76);
+  color: white;
 }
