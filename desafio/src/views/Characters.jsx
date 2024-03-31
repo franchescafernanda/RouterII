@@ -14,11 +14,11 @@ const Characters = () => {
       if (!charactersCategoryState) 
       return
       try {
-        let url = "";
+        let url = ""
         if (charactersCategoryState === "pokemon") {
           url = "https://pokeapi.co/api/v2/pokemon?limit=151";
         } else {
-          url = `https://pokeapi.co/api/v2/${charactersCategoryState}`;
+          url = `https://pokeapi.co/api/v2/${charactersCategoryState}`
         }
         const response = await fetch(url)
         if (!response.ok) {
@@ -45,7 +45,7 @@ const Characters = () => {
   }
 
   const handleCharacterClick = (character) => {
-    navigate(`/characters/${character}`);
+    navigate(`/characters/${character}`)
   }
 
   return (
